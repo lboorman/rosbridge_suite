@@ -199,7 +199,7 @@ class Subscription:
             self.compression = "cbor-raw"
 
         with self.handler_lock:
-            self.handler = self.handler.set_throttle_rate(self.throttle_rate)
+            self.handler.set_throttle_rate(self.throttle_rate)
             self.handler = self.handler.set_queue_length(self.queue_length)
 
 
